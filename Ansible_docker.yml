@@ -1,0 +1,14 @@
+---
+- name: Ansible file
+  hosts: webservers
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Install update on ubuntu
+      shell:
+        "apt-install update"
+    - name: install docker engine
+      delay: 10
+      shell:
+        "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin" 
+    - name: copy the file to the server after build
