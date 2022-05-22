@@ -4,7 +4,26 @@
   gather_facts: no
   become: yes
   tasks:
-    - name: install docker engine
-      delay: 10
+    - name: copy the file to the server
+      copy:
+        src: /var/lib/jenkins/workspace/Ansible project/inputFile
+        dest: /opt/inputFile/
+        owner: ubuntu
+        group: ubuntu
+        mode: 770
+    - name: copy the file
+      copy:
+        src: /var/lib/jenkins/workspace/Ansible project/docker_c
+        dest: /opt/docker_c/
+        owner: ubuntu
+        group: ubuntu
+        mode: 770
+    - name: copy the file
+      async: 10
+      poll: 0
       shell:
-        "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin" 
+        "docker-compose up" 
+      args:
+        chdir: :"/opt/docker_c/"
+      register: datecmd
+        
