@@ -4,11 +4,7 @@
   gather_facts: no
   become: yes
   tasks:
-    - name: Install update on ubuntu
-      shell:
-        "apt install update -y"
     - name: Install docker
-      delay: 30
       shell:
         "apt install docker -y"
     - name: Install docker-compose
