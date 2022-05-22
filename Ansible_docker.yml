@@ -19,10 +19,7 @@
         owner: root
         group: root
         mode: 770
-        
-    - name: run shell cmd
-      shell:
-        "chmod +x /opt/docker_c/docker-compose.yml" 
+   
              
     - name: run shell cmd
       async: 30
