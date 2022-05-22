@@ -7,7 +7,7 @@
     - name: copy the file to the server
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile/index.html
-        dest: /opt/inputFile
+        dest: /opt/inputFile/
         owner: root
         group: root
         mode: 550
