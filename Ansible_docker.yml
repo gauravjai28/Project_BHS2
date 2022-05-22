@@ -6,8 +6,8 @@
   tasks:
     - name: copy the file to the server
       copy:
-        src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile/index.html
-        dest: /opt/inputFile/index.html
+        src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile/
+        dest: /opt/inputFile/
        
         
     - name: copy the file
@@ -21,4 +21,3 @@
       poll: 0
       shell:
         "cd /opt/docker_c && docker-compose up"
-        
