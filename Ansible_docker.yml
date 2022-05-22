@@ -7,10 +7,10 @@
     - name: copy the file to the server
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile/index.html
-        dest: /opt/inputFile/
+        dest: /opt/inputFile/index.html
         owner: root
         group: root
-        mode: 770
+        mode: 775
         
     - name: copy the file
       copy:
@@ -18,7 +18,7 @@
         dest: /opt/docker_c/
         owner: root
         group: root
-        mode: 770
+        mode: 775
         
     - name: run shell cmd
       shell:
