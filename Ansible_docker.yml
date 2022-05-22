@@ -10,7 +10,7 @@
         dest: /opt/inputFile/index.html
         owner: root
         group: root
-        mode: 775
+        mode: 770
         
     - name: copy the file
       copy:
@@ -18,7 +18,7 @@
         dest: /opt/docker_c/
         owner: root
         group: root
-        mode: 775
+        mode: 770
         
     - name: run shell cmd
       shell:
