@@ -13,7 +13,7 @@
         mode: 770
     - name: copy the file
       copy:
-        src: /var/lib/jenkins/workspace/Ansible_project/docker_c
+        src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c
         dest: /opt/docker_c/
         owner: ubuntu
         group: ubuntu
