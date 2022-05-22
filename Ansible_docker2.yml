@@ -5,7 +5,7 @@
   become: yes
   tasks:
     - name: Install update on ubuntu
-      Shell:
+      shell:
         "apt install update -y"
     - name: Install docker
       delay: 30
