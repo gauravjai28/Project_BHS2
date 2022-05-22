@@ -8,11 +8,17 @@
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile/index.html
         dest: /opt/inputFile
+        owner: root
+        group: root
+        mode: 550
         
     - name: copy the file
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c/
         dest: /opt/docker_c
+        owner: mdwuser
+        group: mdwuser
+        mode: 550
         
     - name: run shell cmd
       shell:
@@ -23,3 +29,4 @@
       poll: 0
       shell:
         "cd /opt/docker_c && docker-compose up"
+        
