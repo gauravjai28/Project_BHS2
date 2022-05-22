@@ -6,20 +6,20 @@
   tasks:
     - name: copy the file to the server
       copy:
-        src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile
-        dest: /opt/
+        src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile/index.html
+        dest: /opt/inputFile
         
     - name: copy the file
       copy:
-        src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c
-        dest: /opt/
+        src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c/
+        dest: /opt/docker_c
         
-    - name: copy the file
+    - name: run shell cmd
+      shell:
+        "chmod +x /opt/docker_c/docker-compose.yml" 
+             
+    - name: run shell cmd
       async: 30
       poll: 0
       shell:
-        "docker-compose up" 
-      args:
-        chdir: :"/opt/docker_c/"
-      register: datecmd
-        
+        "cd /opt/docker_c && docker-compose up"
