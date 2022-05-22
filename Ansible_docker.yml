@@ -8,18 +8,14 @@
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile
         dest: /opt/
-        owner: root
-        group: root
-        mode: 770
+        
     - name: copy the file
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c
         dest: /opt/
-        owner: root
-        group: root
-        mode: 770
+        
     - name: copy the file
-      async: 10
+      async: 30
       poll: 0
       shell:
         "docker-compose up" 
