@@ -10,15 +10,15 @@
         dest: /opt/inputFile/
         owner: root
         group: root
-        mode: 550
+        mode: 770
         
     - name: copy the file
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c/
-        dest: /opt/docker_c
+        dest: /opt/docker_c/
         owner: root
         group: root
-        mode: 550
+        mode: 770
         
     - name: run shell cmd
       shell:
