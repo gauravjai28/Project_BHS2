@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  bhsserver:
+    image: nginx:latest
+    container_name: nginx_bhs
+    ports:
+     - 80:80
+    volumes:
+     - /opt/inputFile/index.html:/usr/share/nginx/html/index.html
