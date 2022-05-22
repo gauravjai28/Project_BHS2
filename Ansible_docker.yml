@@ -16,8 +16,8 @@
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c/
         dest: /opt/docker_c
-        owner: mdwuser
-        group: mdwuser
+        owner: root
+        group: root
         mode: 550
         
     - name: run shell cmd
