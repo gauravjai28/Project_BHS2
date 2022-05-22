@@ -7,14 +7,14 @@
     - name: copy the file to the server
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/inputFile
-        dest: /opt/inputFile/
+        dest: /opt/
         owner: ubuntu
         group: ubuntu
         mode: 770
     - name: copy the file
       copy:
         src: /var/lib/jenkins/jobs/Ansible_project/workspace/docker_c
-        dest: /opt/docker_c/
+        dest: /opt/
         owner: ubuntu
         group: ubuntu
         mode: 770
